@@ -1,7 +1,15 @@
 import React from "react";
 import { useState } from "react";
 
-function Output({ output, paragraphs, copied, setCopied }) {
+type OutputProps = {
+  output: Array<string>;
+  paragraphs: boolean;
+  copied: boolean;
+  setCopied: Function;
+};
+
+const Output: React.FunctionComponent<OutputProps> = (props) => {
+  const { output, paragraphs, copied, setCopied } = props;
   
   function handleCopy() {
     navigator.clipboard.writeText(output.join(" "));
