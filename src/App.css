@@ -1,38 +1,265 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&family=Work+Sans&display=swap");
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Work Sans", sans-serif;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #f6f4d2;
+  min-height: 100vh;
+  position: relative;
+}
+
+.content-wrap {
+  padding-bottom: 4.5rem;
+}
+
+.header-container {
+  text-align: center;
+  padding: 72px 32px 32px;
+  max-width: 330px;
+  margin: auto;
+}
+
+h1 {
+  color: #a44a3f;
+  font-family: "IM Fell DW Pica", serif;
+  font-size: 3rem;
+  margin-bottom: 24px;
+}
+
+.header-text {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.options-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  margin-bottom: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+select {
+  padding: 10px;
+  background-color: #a44a3f;
+  color: #fff;
+  font-size: 0.9rem;
+  border: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.generate-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+button {
+  background-color: #cbdfbd;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: #a44a3f;
+  font-weight: 600;
+  transition: opacity 0.3s;
+}
+
+.generate-button {
+  padding: 15px;
+  font-size: 1.2rem;
+}
+
+button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.output-container {
+  padding: 0 16px;
+  line-height: 1.2;
+  font-size: 1.2rem;
+  max-width: 550px;
+  margin: auto;
+}
+
+.output-text {
+  margin-bottom: 32px;
+}
+
+.copy-button-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.copy-button {
+  padding: 10px;
+  font-size: 0.8rem;
+  width: fit-content;
+  margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.copied-text {
+  text-align: center;
+  font-size: .75rem;
+  animation-name: appear;
+  animation-duration: .7s;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
   }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.footer a {
+  color: #a44a3f;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #d4e09b;
 }
